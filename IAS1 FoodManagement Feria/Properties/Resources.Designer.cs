@@ -73,16 +73,6 @@ namespace IAS1_FoodManagement_Feria.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap buttonArea {
-            get {
-                object obj = ResourceManager.GetObject("buttonArea", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap m_chocolate_heaven {
             get {
                 object obj = ResourceManager.GetObject("m-chocolate-heaven", resourceCulture);
@@ -123,16 +113,6 @@ namespace IAS1_FoodManagement_Feria.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_item {
-            get {
-                object obj = ResourceManager.GetObject("menu-item", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap p_all_meaty {
             get {
                 object obj = ResourceManager.GetObject("p-all-meaty", resourceCulture);
@@ -156,16 +136,6 @@ namespace IAS1_FoodManagement_Feria.Properties {
         internal static System.Drawing.Bitmap p_bbq {
             get {
                 object obj = ResourceManager.GetObject("p-bbq", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap p_bbq1 {
-            get {
-                object obj = ResourceManager.GetObject("p-bbq1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

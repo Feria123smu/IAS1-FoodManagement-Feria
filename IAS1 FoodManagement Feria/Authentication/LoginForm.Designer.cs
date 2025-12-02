@@ -157,7 +157,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::IAS1_FoodManagement_Feria.Properties.Resources.bg_food;
             this.ClientSize = new System.Drawing.Size(735, 537);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.txtRole);

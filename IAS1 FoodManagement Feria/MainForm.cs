@@ -27,8 +27,11 @@ namespace IAS1_FoodManagement_Feria
 
         private void LoadMenu()
         {
-            MenuForm Menu = new MenuForm();
-            FormManagement.PlaceForm(Menu, panel1);
+            //MenuForm Menu = new MenuForm();
+            //FormManagement.PlaceForm(Menu, panel1);
+
+            CashierForm cashier = new CashierForm();
+            FormManagement.PlaceForm(cashier, panel1);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
