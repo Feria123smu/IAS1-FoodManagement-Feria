@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace IAS1_FoodManagement_Feria.Food
 {
-    internal class MenuItems
+    internal class MenuItem
     {
 
         internal enum Id

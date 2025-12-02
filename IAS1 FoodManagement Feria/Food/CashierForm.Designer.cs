@@ -45,6 +45,8 @@
             this.panelReceipt5 = new System.Windows.Forms.Panel();
             this.panelReceipt4 = new System.Windows.Forms.Panel();
             this.panelReceipt6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +54,8 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panelReceipt6);
             this.panel1.Controls.Add(this.panelReceipt3);
             this.panel1.Controls.Add(this.panelReceipt4);
@@ -216,6 +220,27 @@
             this.panelReceipt6.Size = new System.Drawing.Size(318, 57);
             this.panelReceipt6.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(890, 537);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Total:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label2.Location = new System.Drawing.Point(947, 543);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 19);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "₱1600";
+            // 
             // CashierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +251,7 @@
             this.Name = "CashierForm";
             this.Text = "CashierForm";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -248,5 +274,7 @@
         private System.Windows.Forms.Panel panelReceipt5;
         private System.Windows.Forms.Panel panelReceipt2;
         private System.Windows.Forms.Panel panelReceipt0;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

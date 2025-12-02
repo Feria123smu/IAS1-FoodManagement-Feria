@@ -16,5 +16,17 @@ namespace IAS1_FoodManagement_Feria.Food
         {
             InitializeComponent();
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        internal void SetText(string name, decimal price, int quantity)
+        {
+            lblName.Text = name;
+            lblUnitPrice.Text = $"₱ {price}  x {quantity}";
+            lblMultipliedPrice.Text = $"₱ {price * quantity}";
+        }
     }
 }

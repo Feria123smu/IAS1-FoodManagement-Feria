@@ -45,11 +45,9 @@
             // 
             this.GroupBox1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.GroupBox1.Controls.Add(this.Label3);
-            this.GroupBox1.Location = new System.Drawing.Point(-90, -34);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.GroupBox1.Location = new System.Drawing.Point(-68, -28);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox1.Size = new System.Drawing.Size(981, 166);
+            this.GroupBox1.Size = new System.Drawing.Size(736, 135);
             this.GroupBox1.TabIndex = 9;
             this.GroupBox1.TabStop = false;
             // 
@@ -59,20 +57,18 @@
             this.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Label3.Font = new System.Drawing.Font("Modern No. 20", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Label3.Location = new System.Drawing.Point(251, 20);
-            this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label3.Location = new System.Drawing.Point(177, 32);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(430, 125);
+            this.Label3.Size = new System.Drawing.Size(347, 100);
             this.Label3.TabIndex = 3;
             this.Label3.Text = "LOGIN";
             // 
             // txtRole
             // 
             this.txtRole.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtRole.Location = new System.Drawing.Point(183, 330);
-            this.txtRole.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRole.Location = new System.Drawing.Point(137, 268);
             this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(345, 22);
+            this.txtRole.Size = new System.Drawing.Size(260, 20);
             this.txtRole.TabIndex = 17;
             // 
             // Label4
@@ -80,10 +76,9 @@
             this.Label4.AutoSize = true;
             this.Label4.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.Label4.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.Location = new System.Drawing.Point(97, 323);
-            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label4.Location = new System.Drawing.Point(73, 262);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(75, 31);
+            this.Label4.Size = new System.Drawing.Size(59, 26);
             this.Label4.TabIndex = 16;
             this.Label4.Text = "Role:";
             // 
@@ -91,10 +86,9 @@
             // 
             this.btnExit.BackColor = System.Drawing.Color.Silver;
             this.btnExit.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(294, 421);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Location = new System.Drawing.Point(220, 342);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(100, 63);
+            this.btnExit.Size = new System.Drawing.Size(75, 51);
             this.btnExit.TabIndex = 15;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -103,10 +97,9 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Silver;
             this.btnLogin.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(145, 421);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogin.Location = new System.Drawing.Point(109, 342);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(100, 63);
+            this.btnLogin.Size = new System.Drawing.Size(75, 51);
             this.btnLogin.TabIndex = 14;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -114,19 +107,17 @@
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtPassword.Location = new System.Drawing.Point(183, 278);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Location = new System.Drawing.Point(137, 226);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(345, 22);
+            this.txtPassword.Size = new System.Drawing.Size(260, 20);
             this.txtPassword.TabIndex = 13;
             // 
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtUsername.Location = new System.Drawing.Point(183, 227);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Location = new System.Drawing.Point(137, 184);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(345, 22);
+            this.txtUsername.Size = new System.Drawing.Size(260, 20);
             this.txtUsername.TabIndex = 12;
             // 
             // Label2
@@ -134,10 +125,9 @@
             this.Label2.AutoSize = true;
             this.Label2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.Label2.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(33, 271);
-            this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label2.Location = new System.Drawing.Point(25, 220);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(137, 31);
+            this.Label2.Size = new System.Drawing.Size(107, 26);
             this.Label2.TabIndex = 11;
             this.Label2.Text = "Password:";
             // 
@@ -146,18 +136,17 @@
             this.Label1.AutoSize = true;
             this.Label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.Label1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(25, 219);
-            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label1.Location = new System.Drawing.Point(19, 178);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(144, 31);
+            this.Label1.Size = new System.Drawing.Size(113, 26);
             this.Label1.TabIndex = 10;
             this.Label1.Text = "Username:";
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 537);
+            this.ClientSize = new System.Drawing.Size(551, 436);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.txtRole);
             this.Controls.Add(this.Label4);
@@ -167,6 +156,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.GroupBox1.ResumeLayout(false);

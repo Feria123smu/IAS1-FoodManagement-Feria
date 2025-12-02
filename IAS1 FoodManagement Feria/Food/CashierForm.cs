@@ -4,25 +4,34 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static IAS1_FoodManagement_Feria.Food.MenuItems;
+using System.Xml.Linq;
+using static IAS1_FoodManagement_Feria.Food.MenuItem;
 
 namespace IAS1_FoodManagement_Feria.Food
 {
     public partial class CashierForm : Form
     {
         private Button[] buttons;
+        private ReceipItemForm[] receiptItems;
 
         private Bitmap[] bitmaps;
         private string[] names;
         private decimal[] prices;
 
+        private int currentReceiptIndex = 0;
+
+        private List<int> quantities = new List<int>();
+        private List<MenuItem.Id> orderItems = new List<MenuItem.Id>();
+
         public CashierForm()
         {
             InitializeComponent();
             AssignMenuItemButtons();
+            AssignReceiptItemPanels();
             PopulateMenuItems();
 
             for (int i = 0; i < bitmaps.Length; i++)
@@ -33,7 +42,7 @@ namespace IAS1_FoodManagement_Feria.Food
 
         private void PopulateMenuItems()
         {
-            (string[], decimal[], Bitmap[]) items = MenuItems.GetMenuItems();
+            (string[], decimal[], Bitmap[]) items = MenuItem.GetMenuItems();
 
             names = items.Item1;
             prices = items.Item2;
@@ -51,12 +60,46 @@ namespace IAS1_FoodManagement_Feria.Food
             buttons[5] = btnItem5;
         }
 
-        private void ItemClick(int itemIndex)
+        private void AssignReceiptItemPanels()
         {
+            //Panel[] receiptItemPanels = new Panel[6];
+            receiptItems = new ReceipItemForm[6];
 
+            //receiptItemPanels[0] = panelReceipt0;
+            //receiptItemPanels[1] = panelReceipt1;
+            //receiptItemPanels[2] = panelReceipt2;
+            //receiptItemPanels[3] = panelReceipt3;
+            //receiptItemPanels[4] = panelReceipt4;
+            //receiptItemPanels[5] = panelReceipt5;
+
+            AddReceiptItem(0, panelReceipt0);
+            AddReceiptItem(1, panelReceipt1);
+            AddReceiptItem(2, panelReceipt2);
+            AddReceiptItem(3, panelReceipt3);
+            AddReceiptItem(4, panelReceipt4);
+            AddReceiptItem(5, panelReceipt5);
+            
+            void AddReceiptItem(int index, Panel panel)
+            {
+                receiptItems[index] = new ReceipItemForm();
+                FormManagement.PlaceForm(receiptItems[index], panel);
+                receiptItems[index].Show();
+                receiptItems[index].Hide();
+            }
         }
 
-        private void DisplayMenuItems(params MenuItems.Id[] menuItemIndices)
+        private void ItemClick(int itemIndex)
+        {
+            orderItems.Add((MenuItem.Id)itemIndex);
+            quantities.Add(1);
+
+            receiptItems[currentReceiptIndex].SetText(names[itemIndex], prices[itemIndex], 1);
+
+            receiptItems[currentReceiptIndex].Show();
+            currentReceiptIndex++;
+        }
+
+        private void DisplayMenuItems(params MenuItem.Id[] menuItemIndices)
         {
             for (int i = 0; i < buttons.Length; i++)
             {
@@ -76,9 +119,9 @@ namespace IAS1_FoodManagement_Feria.Food
         {
             DisplayMenuItems
             (
-                MenuItems.Id.AllMeaty,
-                MenuItems.Id.Barbecue,
-                MenuItems.Id.BaconCheese
+                MenuItem.Id.AllMeaty,
+                MenuItem.Id.Barbecue,
+                MenuItem.Id.BaconCheese
            );
         }
 
@@ -86,37 +129,22 @@ namespace IAS1_FoodManagement_Feria.Food
         {
             DisplayMenuItems
             (
-                MenuItems.Id.StrawberryCheesecake,
-                MenuItems.Id.CookiesCream,
-                MenuItems.Id.ChocolateHeaven
+                MenuItem.Id.StrawberryCheesecake,
+                MenuItem.Id.CookiesCream,
+                MenuItem.Id.ChocolateHeaven
            );
         }
 
         private void btnItem0_Click(object sender, EventArgs e) { ItemClick(0); }
 
-        private void btnItem1_Click(object sender, EventArgs e)
-        {
-            ItemClick(1);
-        }
+        private void btnItem1_Click(object sender, EventArgs e) { ItemClick(1); }
 
-        private void btnItem2_Click(object sender, EventArgs e)
-        {
-            ItemClick(2);
-        }
+        private void btnItem2_Click(object sender, EventArgs e) { ItemClick(2); }
 
-        private void btnItem3_Click(object sender, EventArgs e)
-        {
-            ItemClick(3);
-        }
+        private void btnItem3_Click(object sender, EventArgs e) { ItemClick(3); }
 
-        private void btnItem4_Click(object sender, EventArgs e)
-        {
-            ItemClick(4);
-        }
+        private void btnItem4_Click(object sender, EventArgs e) { ItemClick(4); }
 
-        private void btnItem5_Click(object sender, EventArgs e)
-        {
-            ItemClick(5);
-        }
+        private void btnItem5_Click(object sender, EventArgs e) { ItemClick(5); }
     }
 }

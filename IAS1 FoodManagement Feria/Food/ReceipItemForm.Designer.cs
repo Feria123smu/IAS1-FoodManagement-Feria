@@ -90,6 +90,7 @@
             this.btnRemove.Size = new System.Drawing.Size(20, 20);
             this.btnRemove.TabIndex = 1;
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // ReceipItemForm
             // 
