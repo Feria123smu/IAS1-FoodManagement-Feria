@@ -198,5 +198,8 @@
   <ItemGroup>
     <None Include="Resources\buttonArea.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="feria ui.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
