@@ -107,6 +107,7 @@
     <Compile Include="Food\CashierForm.Designer.cs">
       <DependentUpon>CashierForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Food\MenuItems.cs" />
     <Compile Include="Food\MenuTab\PizzaForm.cs">
       <SubType>Form</SubType>
     </Compile>
