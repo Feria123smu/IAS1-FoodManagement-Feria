@@ -101,6 +101,12 @@
     <Compile Include="Authentication\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Authentication\PopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentication\PopupForm.Designer.cs">
+      <DependentUpon>PopupForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Food\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Authentication\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentication\PopupForm.resx">
+      <DependentUpon>PopupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Food\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>

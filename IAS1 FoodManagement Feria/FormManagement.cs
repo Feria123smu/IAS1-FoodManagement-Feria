@@ -9,12 +9,20 @@ namespace IAS1_FoodManagement_Feria
 {
     internal static class FormManagement
     {
-        internal static void PlaceForm(Form form, Panel panel)
+        internal static void PlaceForm(Form form, Panel panel, bool isLogin = false)
         {
             form.Dock = DockStyle.Fill;
             form.FormBorderStyle = FormBorderStyle.None;
             form.TopLevel = false;
-            panel.Controls.Clear();
+
+            if (isLogin==true)
+            {
+                form.Size = new System.Drawing.Size(600, 450);
+            }
+            else
+                form.Size= new System.Drawing.Size(1246, 767);
+
+                panel.Controls.Clear();
             panel.Controls.Add(form);
             form.Show();
         }

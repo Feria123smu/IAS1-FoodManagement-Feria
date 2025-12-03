@@ -30,6 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelReceipt6 = new System.Windows.Forms.Panel();
+            this.panelReceipt3 = new System.Windows.Forms.Panel();
+            this.panelReceipt4 = new System.Windows.Forms.Panel();
+            this.panelReceipt1 = new System.Windows.Forms.Panel();
+            this.panelReceipt5 = new System.Windows.Forms.Panel();
+            this.panelReceipt2 = new System.Windows.Forms.Panel();
+            this.panelReceipt0 = new System.Windows.Forms.Panel();
             this.btnItem5 = new System.Windows.Forms.Button();
             this.btnItem2 = new System.Windows.Forms.Button();
             this.btnItem4 = new System.Windows.Forms.Button();
@@ -38,15 +47,7 @@
             this.btnItem0 = new System.Windows.Forms.Button();
             this.btnTabMilkshake = new System.Windows.Forms.Button();
             this.btnTabPizza = new System.Windows.Forms.Button();
-            this.panelReceipt0 = new System.Windows.Forms.Panel();
-            this.panelReceipt1 = new System.Windows.Forms.Panel();
-            this.panelReceipt2 = new System.Windows.Forms.Panel();
-            this.panelReceipt3 = new System.Windows.Forms.Panel();
-            this.panelReceipt5 = new System.Windows.Forms.Panel();
-            this.panelReceipt4 = new System.Windows.Forms.Panel();
-            this.panelReceipt6 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.btnPlaceOrder);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panelReceipt6);
@@ -75,6 +77,83 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 675);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label2.Location = new System.Drawing.Point(947, 543);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 19);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "₱1600";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(890, 537);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Total:";
+            // 
+            // panelReceipt6
+            // 
+            this.panelReceipt6.BackColor = System.Drawing.Color.Transparent;
+            this.panelReceipt6.Location = new System.Drawing.Point(862, 442);
+            this.panelReceipt6.Name = "panelReceipt6";
+            this.panelReceipt6.Size = new System.Drawing.Size(318, 57);
+            this.panelReceipt6.TabIndex = 2;
+            // 
+            // panelReceipt3
+            // 
+            this.panelReceipt3.BackColor = System.Drawing.Color.Transparent;
+            this.panelReceipt3.Location = new System.Drawing.Point(862, 235);
+            this.panelReceipt3.Name = "panelReceipt3";
+            this.panelReceipt3.Size = new System.Drawing.Size(318, 57);
+            this.panelReceipt3.TabIndex = 2;
+            // 
+            // panelReceipt4
+            // 
+            this.panelReceipt4.BackColor = System.Drawing.Color.Transparent;
+            this.panelReceipt4.Location = new System.Drawing.Point(862, 304);
+            this.panelReceipt4.Name = "panelReceipt4";
+            this.panelReceipt4.Size = new System.Drawing.Size(318, 57);
+            this.panelReceipt4.TabIndex = 2;
+            // 
+            // panelReceipt1
+            // 
+            this.panelReceipt1.BackColor = System.Drawing.Color.Transparent;
+            this.panelReceipt1.Location = new System.Drawing.Point(862, 97);
+            this.panelReceipt1.Name = "panelReceipt1";
+            this.panelReceipt1.Size = new System.Drawing.Size(318, 57);
+            this.panelReceipt1.TabIndex = 2;
+            // 
+            // panelReceipt5
+            // 
+            this.panelReceipt5.BackColor = System.Drawing.Color.Transparent;
+            this.panelReceipt5.Location = new System.Drawing.Point(862, 373);
+            this.panelReceipt5.Name = "panelReceipt5";
+            this.panelReceipt5.Size = new System.Drawing.Size(318, 57);
+            this.panelReceipt5.TabIndex = 2;
+            // 
+            // panelReceipt2
+            // 
+            this.panelReceipt2.BackColor = System.Drawing.Color.Transparent;
+            this.panelReceipt2.Location = new System.Drawing.Point(862, 166);
+            this.panelReceipt2.Name = "panelReceipt2";
+            this.panelReceipt2.Size = new System.Drawing.Size(318, 57);
+            this.panelReceipt2.TabIndex = 2;
+            // 
+            // panelReceipt0
+            // 
+            this.panelReceipt0.BackColor = System.Drawing.Color.Transparent;
+            this.panelReceipt0.Location = new System.Drawing.Point(862, 28);
+            this.panelReceipt0.Name = "panelReceipt0";
+            this.panelReceipt0.Size = new System.Drawing.Size(318, 57);
+            this.panelReceipt0.TabIndex = 2;
             // 
             // btnItem5
             // 
@@ -164,82 +243,18 @@
             this.btnTabPizza.UseVisualStyleBackColor = false;
             this.btnTabPizza.Click += new System.EventHandler(this.btnTabPizza_Click);
             // 
-            // panelReceipt0
+            // btnPlaceOrder
             // 
-            this.panelReceipt0.BackColor = System.Drawing.Color.Transparent;
-            this.panelReceipt0.Location = new System.Drawing.Point(862, 28);
-            this.panelReceipt0.Name = "panelReceipt0";
-            this.panelReceipt0.Size = new System.Drawing.Size(318, 57);
-            this.panelReceipt0.TabIndex = 2;
-            // 
-            // panelReceipt1
-            // 
-            this.panelReceipt1.BackColor = System.Drawing.Color.Transparent;
-            this.panelReceipt1.Location = new System.Drawing.Point(862, 97);
-            this.panelReceipt1.Name = "panelReceipt1";
-            this.panelReceipt1.Size = new System.Drawing.Size(318, 57);
-            this.panelReceipt1.TabIndex = 2;
-            // 
-            // panelReceipt2
-            // 
-            this.panelReceipt2.BackColor = System.Drawing.Color.Transparent;
-            this.panelReceipt2.Location = new System.Drawing.Point(862, 166);
-            this.panelReceipt2.Name = "panelReceipt2";
-            this.panelReceipt2.Size = new System.Drawing.Size(318, 57);
-            this.panelReceipt2.TabIndex = 2;
-            // 
-            // panelReceipt3
-            // 
-            this.panelReceipt3.BackColor = System.Drawing.Color.Transparent;
-            this.panelReceipt3.Location = new System.Drawing.Point(862, 235);
-            this.panelReceipt3.Name = "panelReceipt3";
-            this.panelReceipt3.Size = new System.Drawing.Size(318, 57);
-            this.panelReceipt3.TabIndex = 2;
-            // 
-            // panelReceipt5
-            // 
-            this.panelReceipt5.BackColor = System.Drawing.Color.Transparent;
-            this.panelReceipt5.Location = new System.Drawing.Point(862, 373);
-            this.panelReceipt5.Name = "panelReceipt5";
-            this.panelReceipt5.Size = new System.Drawing.Size(318, 57);
-            this.panelReceipt5.TabIndex = 2;
-            // 
-            // panelReceipt4
-            // 
-            this.panelReceipt4.BackColor = System.Drawing.Color.Transparent;
-            this.panelReceipt4.Location = new System.Drawing.Point(862, 304);
-            this.panelReceipt4.Name = "panelReceipt4";
-            this.panelReceipt4.Size = new System.Drawing.Size(318, 57);
-            this.panelReceipt4.TabIndex = 2;
-            // 
-            // panelReceipt6
-            // 
-            this.panelReceipt6.BackColor = System.Drawing.Color.Transparent;
-            this.panelReceipt6.Location = new System.Drawing.Point(862, 442);
-            this.panelReceipt6.Name = "panelReceipt6";
-            this.panelReceipt6.Size = new System.Drawing.Size(318, 57);
-            this.panelReceipt6.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(890, 537);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Total:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label2.Location = new System.Drawing.Point(947, 543);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 19);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "₱1600";
+            this.btnPlaceOrder.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlaceOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPlaceOrder.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnPlaceOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPlaceOrder.Location = new System.Drawing.Point(941, 597);
+            this.btnPlaceOrder.Name = "btnPlaceOrder";
+            this.btnPlaceOrder.Size = new System.Drawing.Size(151, 41);
+            this.btnPlaceOrder.TabIndex = 5;
+            this.btnPlaceOrder.UseVisualStyleBackColor = false;
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
             // 
             // CashierForm
             // 
@@ -276,5 +291,6 @@
         private System.Windows.Forms.Panel panelReceipt0;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPlaceOrder;
     }
 }

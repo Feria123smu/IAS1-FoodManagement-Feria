@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,13 +31,19 @@ namespace IAS1_FoodManagement_Feria
         {
         }
 
+        private void ChangeForm(Form form)
+        {
+            this.Size = new Size(1246, 767);
+            FormManagement.PlaceForm(form, panel1);
+        }
+
         private void LoadMenu()
         {
             //MenuForm Menu = new MenuForm();
             //FormManagement.PlaceForm(Menu, panel1);
 
             CashierForm cashier = new CashierForm();
-            FormManagement.PlaceForm(cashier, panel1);
+            ChangeForm(cashier);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -66,7 +73,9 @@ namespace IAS1_FoodManagement_Feria
         private void LockApplication()
         {
             LoginForm loginForm = new LoginForm();
-            FormManagement.PlaceForm(loginForm, panel1);
+            this.Size = new Size(620, 470);
+
+            FormManagement.PlaceForm(loginForm, panel1, true);
         }
 
         [StructLayout(LayoutKind.Sequential)]

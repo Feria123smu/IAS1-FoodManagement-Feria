@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IAS1_FoodManagement_Feria.Authentication;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -135,6 +136,8 @@ namespace IAS1_FoodManagement_Feria.Food
            );
         }
 
+
+
         private void btnItem0_Click(object sender, EventArgs e) { ItemClick(0); }
 
         private void btnItem1_Click(object sender, EventArgs e) { ItemClick(1); }
@@ -146,5 +149,11 @@ namespace IAS1_FoodManagement_Feria.Food
         private void btnItem4_Click(object sender, EventArgs e) { ItemClick(4); }
 
         private void btnItem5_Click(object sender, EventArgs e) { ItemClick(5); }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            PopupForm popup = new PopupForm(1500); 
+            popup.Show(); 
+        }
     }
 }
