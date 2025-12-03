@@ -75,7 +75,6 @@
             this.txtPayment.Name = "txtPayment";
             this.txtPayment.Size = new System.Drawing.Size(246, 32);
             this.txtPayment.TabIndex = 3;
-            this.txtPayment.Text = "120000";
             // 
             // label2
             // 

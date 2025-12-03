@@ -18,6 +18,7 @@ namespace IAS1_FoodManagement_Feria.Food
     {
         private Button[] buttons;
         private ReceipItemForm[] receiptItems;
+        private Panel[] receiptItemPanels;
 
         private Bitmap[] bitmaps;
         private string[] names;
@@ -39,6 +40,7 @@ namespace IAS1_FoodManagement_Feria.Food
             {
                 buttons[i].BackgroundImage = bitmaps[i];
             }
+
         }
 
         private void PopulateMenuItems()
@@ -65,6 +67,7 @@ namespace IAS1_FoodManagement_Feria.Food
         {
             //Panel[] receiptItemPanels = new Panel[6];
             receiptItems = new ReceipItemForm[6];
+            receiptItemPanels = new Panel[6];
 
             //receiptItemPanels[0] = panelReceipt0;
             //receiptItemPanels[1] = panelReceipt1;
@@ -83,21 +86,100 @@ namespace IAS1_FoodManagement_Feria.Food
             void AddReceiptItem(int index, Panel panel)
             {
                 receiptItems[index] = new ReceipItemForm();
+                receiptItemPanels[index] = panel;
+
                 FormManagement.PlaceForm(receiptItems[index], panel);
                 receiptItems[index].Show();
                 receiptItems[index].Hide();
             }
         }
 
+        private int tmpInt = 0;
         private void ItemClick(int itemIndex)
         {
-            orderItems.Add((MenuItem.Id)itemIndex);
-            quantities.Add(1);
+            if (orderItems.Contains((MenuItem.Id)itemIndex))
+            {
+                for (int i = 0; i < orderItems.Count; i++)
+                {
+                    if (orderItems[i] == (MenuItem.Id)itemIndex)
+                    {
+                        quantities[i]++;
 
-            receiptItems[currentReceiptIndex].SetText(names[itemIndex], prices[itemIndex], 1);
+                        receiptItems[i].SetText(names[itemIndex], prices[itemIndex], quantities[i]);
+                        break;
+                    }
 
-            receiptItems[currentReceiptIndex].Show();
-            currentReceiptIndex++;
+                }
+            }
+            else
+            {
+                receiptItems[orderItems.Count].SetText(names[itemIndex], prices[itemIndex], 1);
+                receiptItems[orderItems.Count].SetRemoveDependency(orderItems.Count, ReceiptRemoveClicked);
+                receiptItems[orderItems.Count].Show();
+                receiptItemPanels[orderItems.Count].Visible = true;
+
+                orderItems.Add((MenuItem.Id)itemIndex);
+                quantities.Add(1);
+            }
+            UpdateTotalPrice();
+        }
+
+        private decimal GetTotalPrice()
+        {
+            decimal total = 0;
+            for (int i = 0; i < orderItems.Count; i++)
+            {
+                total += prices[(int)orderItems[i]] * quantities[i];
+            }
+            return total;
+        }
+
+        private void UpdateTotalPrice()
+        {
+            lblTotal.Text = GetTotalPrice().ToString();
+        }
+
+        private void ReceiptRemoveClicked(int index)
+        {
+            orderItems.RemoveAt(index);
+            quantities.RemoveAt(index);
+
+            RefreshReceipt();
+            //int currentItemIndex;
+
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    if (i < orderItems.Count)
+            //    {
+            //        currentItemIndex = (int)orderItems[i];
+            //        receiptItems[i].SetText(names[currentItemIndex], prices[currentItemIndex], quantities[i]);
+            //        receiptItemPanels[i].Visible = true;
+            //    }
+            //    else
+            //    {
+            //        receiptItemPanels[i].Visible = false;
+            //    }
+            //}
+            UpdateTotalPrice();
+        }
+
+        private void RefreshReceipt()
+        {
+            int currentItemIndex;
+
+            for (int i = 0; i < 6; i++)
+            {
+                if (i < orderItems.Count)
+                {
+                    currentItemIndex = (int)orderItems[i];
+                    receiptItems[i].SetText(names[currentItemIndex], prices[currentItemIndex], quantities[i]);
+                    receiptItemPanels[i].Visible = true;
+                }
+                else
+                {
+                    receiptItemPanels[i].Visible = false;
+                }
+            }
         }
 
         private void DisplayMenuItems(params MenuItem.Id[] menuItemIndices)
@@ -136,24 +218,36 @@ namespace IAS1_FoodManagement_Feria.Food
            );
         }
 
-
-
         private void btnItem0_Click(object sender, EventArgs e) { ItemClick(0); }
-
         private void btnItem1_Click(object sender, EventArgs e) { ItemClick(1); }
-
         private void btnItem2_Click(object sender, EventArgs e) { ItemClick(2); }
-
         private void btnItem3_Click(object sender, EventArgs e) { ItemClick(3); }
-
         private void btnItem4_Click(object sender, EventArgs e) { ItemClick(4); }
-
         private void btnItem5_Click(object sender, EventArgs e) { ItemClick(5); }
 
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
-            PopupForm popup = new PopupForm(1500); 
+            PopupForm popup = new PopupForm(TransactionCompleted, GetTotalPrice(), GetFoodItems()); 
             popup.Show(); 
+        }
+
+        private (string, int)[] GetFoodItems()
+        {
+            (string, int)[] items = new (string, int)[orderItems.Count];
+
+            for (int i = 0; i < items.Length; i++)
+            {
+                items[i].Item1 = names[(int)orderItems[i]];
+                items[i].Item2 = quantities[i];
+            }
+            return items;
+        }
+
+        private void TransactionCompleted()
+        {
+            orderItems.Clear();
+            quantities.Clear();
+            RefreshReceipt();
         }
     }
 }

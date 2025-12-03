@@ -30,7 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnPlaceOrder = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelReceipt6 = new System.Windows.Forms.Panel();
             this.panelReceipt3 = new System.Windows.Forms.Panel();
@@ -47,7 +48,6 @@
             this.btnItem0 = new System.Windows.Forms.Button();
             this.btnTabMilkshake = new System.Windows.Forms.Button();
             this.btnTabPizza = new System.Windows.Forms.Button();
-            this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Controls.Add(this.btnPlaceOrder);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblTotal);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panelReceipt6);
             this.panel1.Controls.Add(this.panelReceipt3);
@@ -78,16 +78,29 @@
             this.panel1.Size = new System.Drawing.Size(1200, 675);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // btnPlaceOrder
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label2.Location = new System.Drawing.Point(947, 543);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 19);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "₱1600";
+            this.btnPlaceOrder.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlaceOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPlaceOrder.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnPlaceOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPlaceOrder.Location = new System.Drawing.Point(941, 597);
+            this.btnPlaceOrder.Name = "btnPlaceOrder";
+            this.btnPlaceOrder.Size = new System.Drawing.Size(151, 41);
+            this.btnPlaceOrder.TabIndex = 5;
+            this.btnPlaceOrder.UseVisualStyleBackColor = false;
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblTotal.Location = new System.Drawing.Point(947, 543);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(67, 19);
+            this.lblTotal.TabIndex = 4;
+            this.lblTotal.Text = "₱1600";
             // 
             // label1
             // 
@@ -243,19 +256,6 @@
             this.btnTabPizza.UseVisualStyleBackColor = false;
             this.btnTabPizza.Click += new System.EventHandler(this.btnTabPizza_Click);
             // 
-            // btnPlaceOrder
-            // 
-            this.btnPlaceOrder.BackColor = System.Drawing.Color.Transparent;
-            this.btnPlaceOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPlaceOrder.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPlaceOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPlaceOrder.Location = new System.Drawing.Point(941, 597);
-            this.btnPlaceOrder.Name = "btnPlaceOrder";
-            this.btnPlaceOrder.Size = new System.Drawing.Size(151, 41);
-            this.btnPlaceOrder.TabIndex = 5;
-            this.btnPlaceOrder.UseVisualStyleBackColor = false;
-            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
-            // 
             // CashierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,7 +289,7 @@
         private System.Windows.Forms.Panel panelReceipt5;
         private System.Windows.Forms.Panel panelReceipt2;
         private System.Windows.Forms.Panel panelReceipt0;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPlaceOrder;
     }
