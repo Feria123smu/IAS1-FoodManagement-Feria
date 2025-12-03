@@ -60,6 +60,7 @@ namespace IAS1_FoodManagement_Feria.Authentication
 
                 //MessageBox.Show($"Congratu-lechon, may kupit kang pang ₱{pay - cost}.", "Transaction Completed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            
         }
 
         private bool ValidateFields()

@@ -42,8 +42,8 @@ namespace IAS1_FoodManagement_Feria
             //MenuForm Menu = new MenuForm();
             //FormManagement.PlaceForm(Menu, panel1);
 
-            CashierForm cashier = new CashierForm();
-            ChangeForm(cashier);
+            AdminForm form = new AdminForm();
+            ChangeForm(form);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
