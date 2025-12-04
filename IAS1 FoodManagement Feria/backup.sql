@@ -24,6 +24,33 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `dbs_lab1` /*!40100 DEFAULT CHARACTER S
 USE `dbs_lab1`;
 
 --
+-- Table structure for table `audit_tbl`
+--
+
+DROP TABLE IF EXISTS `audit_tbl`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `audit_tbl` (
+  `userid` int DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `role` varchar(45) DEFAULT NULL,
+  `logDate` datetime DEFAULT NULL,
+  `auditActivity` varchar(45) DEFAULT NULL,
+  `details` longtext
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `audit_tbl`
+--
+
+LOCK TABLES `audit_tbl` WRITE;
+/*!40000 ALTER TABLE `audit_tbl` DISABLE KEYS */;
+INSERT INTO `audit_tbl` VALUES (-1,'','','2025-12-04 21:46:10','New receipt','Receipt \n[payment: \"831\",\npay_change: \"1\",\ncustomerName: \"Try lang\",\ndeliver address: \"Palasyo ni San Pedro Jr.\"\nItems:\n[\n        receipt_id: \"26\"\n    food_item: \"BaconCheese\"\n    quantity: \"1\"\n]\n[\n        receipt_id: \"26\"\n    food_item: \"Barbecue\"\n    quantity: \"1\"\n]\n'),(-1,'','','2025-12-04 21:49:38','New receipt','Receipt \n[payment: \"5000\",\npay_change: \"3850\",\ncustomerName: \"gh\",\ndeliver address: \"gfh6\"\nItems:\n[\n        receipt_id: \"27\"\n    food_item: \"Barbecue\"\n    quantity: \"1\"\n]\n[\n        receipt_id: \"27\"\n    food_item: \"CookiesCream\"\n    quantity: \"1\"\n]\n[\n        receipt_id: \"27\"\n    food_item: \"ChocolateHeaven\"\n    quantity: \"1\"\n]\n[\n        receipt_id: \"27\"\n    food_item: \"BaconCheese\"\n    quantity: \"1\"\n]\n'),(-1,'','','2025-12-04 22:32:00','New receipt','Receipt \n[payment: \"2000\",\npay_change: \"850\",\ncustomerName: \"dfh\",\ndeliver address: \"sgh\"\nItems:\n[\n        receipt_id: \"25\"\n    food_item: \"Barbecue\"\n    quantity: \"1\"\n]\n[\n        receipt_id: \"25\"\n    food_item: \"BaconCheese\"\n    quantity: \"1\"\n]\n[\n        receipt_id: \"25\"\n    food_item: \"ChocolateHeaven\"\n    quantity: \"1\"\n]\n[\n        receipt_id: \"25\"\n    food_item: \"CookiesCream\"\n    quantity: \"1\"\n]\n'),(-1,'','','2025-12-04 23:27:27','Receipt deleted successfully','id=\"-1\"'),(-1,'','','2025-12-04 23:27:45','Receipt deleted successfully','id=\"2\"'),(-1,'','','2025-12-04 23:28:27','Receipt deleted successfully','id=\"8\"'),(-1,'','','2025-12-04 23:28:36','Receipt deleted successfully','id=\"16\"');
+/*!40000 ALTER TABLE `audit_tbl` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `receipt_item_tbl`
 --
 
@@ -102,7 +129,7 @@ CREATE TABLE `tbl_user` (
 
 LOCK TABLES `tbl_user` WRITE;
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
-INSERT INTO `tbl_user` VALUES (5,'jose','jose1234','Admin','Pending'),(6,'pedro','pedro1234','User','Active'),(7,'prily','hahahahshshshshshshs','User','Inactive'),(9,'admin','3f28c9e5f49efe2ce08c056ec6ecc5d1','Admin','Active'),(10,'sssd','1153268148783bc42dba5e62ee638485','User','Pending'),(11,'dd','9306dd2bd7a22ee6691624490d78f866','User','Pending'),(12,'fffas','4f6be48299762969396d8def780070b1','User','Pending'),(22,'reggreer','9306dd2bd7a22ee6691624490d78f866','User','Pending');
+INSERT INTO `tbl_user` VALUES (5,'jose','jose1234','Admin','Pending'),(6,'pedro','pedro1234','User','Active'),(7,'prily','hahahahshshshshshshs','User','Inactive'),(9,'admin','9cdca6289d90c1b87395bfcb2a07e1b407710d11141d6c5080fbdfba5360cdff','Admin','Active'),(10,'sssd','1153268148783bc42dba5e62ee638485','User','Pending'),(11,'dd','9306dd2bd7a22ee6691624490d78f866','User','Pending'),(12,'fffas','4f6be48299762969396d8def780070b1','User','Pending'),(22,'reggreer','9306dd2bd7a22ee6691624490d78f866','User','Pending');
 /*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -115,4 +142,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-12-03 22:51:17
+-- Dump completed on 2025-12-05  1:09:17
