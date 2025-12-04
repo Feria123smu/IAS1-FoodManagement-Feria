@@ -95,25 +95,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForm.cs">
+    <Compile Include="Admin\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm.Designer.cs">
+    <Compile Include="Admin\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Authentication\LoginForm.cs">
+    <Compile Include="Authentication\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Authentication\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="Authentication\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Authentication\PopupForm.cs">
+    <Compile Include="Food\PopupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Authentication\PopupForm.Designer.cs">
+    <Compile Include="Food\PopupForm.Designer.cs">
       <DependentUpon>PopupForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BackupRestore.cs" />
+    <Compile Include="Admin\BackupRestore.cs" />
     <Compile Include="Food\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,28 +140,43 @@
       <DependentUpon>ReceipItemForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormManagement.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Admin\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Admin\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MySQL\AuditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySQL\AuditForm.Designer.cs">
+      <DependentUpon>AuditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySQL\AuditorHelper.cs" />
     <Compile Include="MySQL\SQLHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReceiptListForm.cs">
+    <Compile Include="Authentication\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReceiptListForm.Designer.cs">
+    <Compile Include="Authentication\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Module.cs" />
+    <Compile Include="Properties\Password.cs" />
+    <Compile Include="Admin\ReceiptListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ReceiptListForm.Designer.cs">
       <DependentUpon>ReceiptListForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminForm.resx">
+    <EmbeddedResource Include="Admin\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Authentication\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="Authentication\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Authentication\PopupForm.resx">
+    <EmbeddedResource Include="Food\PopupForm.resx">
       <DependentUpon>PopupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Food\Admin.resx">
@@ -176,15 +191,21 @@
     <EmbeddedResource Include="Food\ReceipItemForm.resx">
       <DependentUpon>ReceipItemForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Admin\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySQL\AuditForm.resx">
+      <DependentUpon>AuditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentication\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReceiptListForm.resx">
+    <EmbeddedResource Include="Admin\ReceiptListForm.resx">
       <DependentUpon>ReceiptListForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -244,5 +265,6 @@
     <Content Include="feria ui.svg" />
     <None Include="Resources\menu background1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

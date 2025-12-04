@@ -1,4 +1,5 @@
 ﻿using IAS1_FoodManagement_Feria.Authentication;
+using IAS1_FoodManagement_Feria.MySQL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -228,7 +229,8 @@ namespace IAS1_FoodManagement_Feria.Food
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
             PopupForm popup = new PopupForm(TransactionCompleted, GetTotalPrice(), GetFoodItems()); 
-            popup.Show(); 
+            popup.Show();
+            
         }
 
         private (string, int)[] GetFoodItems()
@@ -245,8 +247,21 @@ namespace IAS1_FoodManagement_Feria.Food
 
         private void TransactionCompleted()
         {
+            ClearReceipt();
+            
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearReceipt();
+
+        }
+
+        private void ClearReceipt()
+        {
             orderItems.Clear();
             quantities.Clear();
+            lblTotal.Text = 0.ToString();
             RefreshReceipt();
         }
     }
